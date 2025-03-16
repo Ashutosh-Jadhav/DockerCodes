@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx:latest
+    ports:
+      # Map port 8080 on the host to port 80 in the container
+      - "8080:80"
+    volumes:
+      # Bind custom HTML to the Nginx container
+      - ./html:/usr/share/nginx/html
